@@ -3,7 +3,7 @@ using DynamicBayesNetNavigation.ProblemRepresentation.Utils;
 
 namespace DynamicBayesNetNavigation.ProblemRepresentation.FieldPropertyObtainingAlgorithms;
 
-    public class TheMostCommonColor : IObtainingAlgorithm
+    public class MostCommonColor : IObtainingAlgorithm
     {
         public IReadOnlyCollection<uint> GenerateVectorOfAttributeForBlock(IReadOnlyCollection<Color> colorsInTheBlock) => 
             new[] { colorsInTheBlock
@@ -11,4 +11,3 @@ namespace DynamicBayesNetNavigation.ProblemRepresentation.FieldPropertyObtaining
                 .Select(g => new { Key = g.Key, Count = g.Count() }).OrderByDescending(el => el.Count).First().Key
                 .ToARGB() };
     }
-
