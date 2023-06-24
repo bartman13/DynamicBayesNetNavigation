@@ -10,7 +10,8 @@ namespace DynamicBayesNetNavigation.NavigationProcess
             ProblemRepresentation.ProblemRepresentation problem,
             (int, int) startPoint,
             (int, int) destination,
-            int maximumLoopSteps = 1000)
+            int maximumLoopSteps = 1000,
+            double accuracy = 1)
         {
             var moveSequence = new List<DefinedMoves>();
             var currentPosition = startPoint;
@@ -40,7 +41,7 @@ namespace DynamicBayesNetNavigation.NavigationProcess
                 {
                     currentPosition.Item2--;
                 }
-                else
+                else if(currentMove == DefinedMoves.Right && currentPosition.Item2 < problem.M-1)
                 {
                     currentPosition.Item2++;
                 }

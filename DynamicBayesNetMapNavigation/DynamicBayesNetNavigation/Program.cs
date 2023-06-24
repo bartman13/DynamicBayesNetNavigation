@@ -1,12 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using DynamicBayesNetNavigation;
 
-using System.Threading.Channels;
-using DynamicBayesNetNavigation;
-using DynamicBayesNetNavigation.Enums;
-using DynamicBayesNetNavigation.NavigatingModule;
-using DynamicBayesNetNavigation.NavigationProcess;
-using DynamicBayesNetNavigation.ProblemRepresentation;
-using DynamicBayesNetNavigation.ProblemRepresentation.FieldPropertyObtainingAlgorithms;
 
 var work = true;
 while (work)
@@ -15,6 +8,7 @@ while (work)
     Console.WriteLine("Opcje:");
     Console.WriteLine("O: Uruchom własny Test");
     Console.WriteLine("M: Uruchom zdwfiniowany moduł testowy");
+    Console.WriteLine("C: Czyszczenie konsoli");
     Console.WriteLine("Dowolny: Zakończ");
     Console.Write("->");
     var key = Console.ReadKey();

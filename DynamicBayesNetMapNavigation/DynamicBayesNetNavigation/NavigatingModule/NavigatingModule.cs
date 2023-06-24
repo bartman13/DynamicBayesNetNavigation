@@ -66,8 +66,6 @@ namespace DynamicBayesNetNavigation.NavigatingModule
         }
 
 
-        // The move is defined by hipotetical position which is weighted average of all positions in vector.
-        // Based on it we choose action which will  
         private DefinedMoves MakeMoveDecision()
         {
             var averageY = _currentParceleState.Sum(x => x.n) / _currentParceleState.Length;
